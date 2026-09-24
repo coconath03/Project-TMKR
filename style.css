@@ -1,0 +1,39 @@
+/* Ensure screen container allows scrolling if needed */
+.letter-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Make the letter card scrollable */
+.letter-paper {
+  max-height: 85vh; /* Sets maximum height relative to screen */
+  overflow-y: auto;  /* Enables vertical scrolling for long content */
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+  
+  /* Smooth scrolling on iOS / touch devices */
+  -webkit-overflow-scrolling: touch; 
+}
+
+/* Optional: Clean, custom scrollbar styling */
+.letter-paper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.letter-paper::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.letter-paper::-webkit-scrollbar-thumb {
+  background: #ff7b9c; /* Change color to match your theme */
+  border-radius: 10px;
+}
